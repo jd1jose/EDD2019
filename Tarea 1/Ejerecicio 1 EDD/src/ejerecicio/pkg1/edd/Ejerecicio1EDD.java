@@ -40,31 +40,28 @@ public class Ejerecicio1EDD {
        if(año_real==1700){
        
        }else{
-        años_atras=(año_real-1700);
+           
        
-      año_b=años_atras/4;
-      
-      if(año_b>0){
-       if(1800>años_atras&&años_atras>=1700){
+           años_atras=(año_real-1700);
+           año_b=años_atras/4;
+       
+       if(año_b>0){
+       if(1800>año_real&&año_real>=1700){      
        dias_años_atras=(año_b-1)*366+(años_atras-año_b+1)*365; 
-        }else if(1900>años_atras&&años_atras>=1800){
+        }else if(1900>año_real&&año_real>=1800){
        dias_años_atras=(año_b-2)*366+(años_atras-año_b+2)*365; 
-        }else if(años_atras>=1900){
+        }else if(año_real>=1900){
        dias_años_atras=(año_b-3)*366+(años_atras-año_b+3)*365; 
+         
         }
       }else{
-          if(1800>años_atras&&años_atras>=1700){
-       dias_años_atras=años_atras*365; 
+          if(1800>año_real&&año_real>=1700){ 
+           dias_años_atras=años_atras*365; 
         }
-      }
-       
-       
-       }
-      
-       System.out.println("dias años atras= "+dias_años_atras);
+      }   
+     }
        año_b=añobis(año_real);
        dias_año_presente=0;
-        System.out.println("que me da añob"+año_b);
        switch(mes)
             {
                case 1 : dias_año_presente=dia;break; 
@@ -80,9 +77,7 @@ public class Ejerecicio1EDD {
                case 11 :dias_año_presente=31+año_b+31+30+31+30+31+31+30+31+dia;  break;
                case 12 :dias_año_presente=31+año_b+31+30+31+30+31+31+30+31+30+dia;  break;
             }
-       System.out.println("dias años presente= "+dias_año_presente);
        dia_total=dias_años_atras+dias_año_presente;
-       System.out.println("dias total= "+dia_total);
        int contador=4;
        for(int i=0;i<dia_total;i++){
            diasemana=Dias_Semana[contador];
@@ -95,10 +90,6 @@ public class Ejerecicio1EDD {
        }
 
        System.out.println("El dia de la semana es "+diasemana);
-  
-    
-    
-    
     }
       }
   public static int añobis(int año){
